@@ -14,4 +14,24 @@ public class Buku implements Comparable<Buku> {
         this.pengarang = pengarang;
         this.tanggalTerbit = tanggalTerbit;
     }
+    
+    public String getjudul() {
+        return judul;
+    }
+
+    public String getPengarang() {
+        return pengarang;
+    }
+
+    public LocalDate getTanggalTerbit() {
+        return tanggalTerbit;
+    }
+
+    public boolean isRead() {
+        return mulaiBaca != null && selesaiBaca != null;
+    }
+
+    public boolean isProgress() {
+        return mulaiBaca != null && selesaiBaca == null;
+    }
 }
