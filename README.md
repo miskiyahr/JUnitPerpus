@@ -1,5 +1,5 @@
 # Tugas Besar
-## JUnitPerpus
+## JUnit Testing Perpustakaan 
 
 
 Disusun Oleh:
@@ -10,3 +10,5 @@ Disusun Oleh:
 
 Dosen Pengampu:
 Panji Wisnu Wirawan, S.T., M.T.
+
+Kelas: Uji Perangkat Lunak (A)
