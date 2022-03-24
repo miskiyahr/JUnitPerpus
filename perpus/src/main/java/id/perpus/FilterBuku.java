@@ -25,5 +25,12 @@ class FilterTahunTerbit implements FilterBuku {
     filter.comparison = tanggal::isAfter;
     return filter;
   }
+  
+  @Override
+  public boolean apply(final Buku b) {
+    return b!=null && comparison.apply(b.getTanggalTerbit());
+  }
+}
+
 
 
