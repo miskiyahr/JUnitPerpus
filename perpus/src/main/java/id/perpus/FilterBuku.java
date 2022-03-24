@@ -18,4 +18,12 @@ class FilterTahunTerbit implements FilterBuku {
     filter.comparison = tanggal::isBefore;
     return filter;
   }
+  
+  static FilterTahunTerbit Before(int tahun) {
+    final LocalDate tanggal = LocalDate.of(tahun, 1, 1);
+    FilterTahunTerbit filter = new FilterTahunTerbit();
+    filter.comparison = tanggal::isAfter;
+    return filter;
+  }
+
 
