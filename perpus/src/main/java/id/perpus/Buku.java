@@ -34,4 +34,17 @@ public class Buku implements Comparable<Buku> {
     public boolean isProgress() {
         return mulaiBaca != null && selesaiBaca == null;
     }
+    
+    public void mulaiBaca(LocalDate tanggalMulai) {
+        this.mulaiBaca = tanggalMulai;
+    }
+
+    public void selesaiBaca(LocalDate tanggalSelesai) {
+        this.selesaiBaca = tanggalSelesai;
+    }
+
+    @Override
+    public int compareTo(Buku that) {
+        return this.judul.compareTo(that.judul);
+    }
 }
