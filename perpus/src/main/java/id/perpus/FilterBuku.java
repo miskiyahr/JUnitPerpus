@@ -32,5 +32,18 @@ class FilterTahunTerbit implements FilterBuku {
   }
 }
 
+class FilterGabungan implements FilterBuku {
+  private List<FilterBuku> filters;
+
+  FilterGabungan() {
+    filters = new ArrayList<>();
+  }
+
+  @Override
+  public boolean apply(final Buku b) {
+    return filters.stream()
+      .map(filterBuku -> filterBuku.apply(b))
+      .reduce(true, (b1, b2) -> b1 && b2);
+  }
 
 
