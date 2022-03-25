@@ -46,4 +46,9 @@ class FilterGabungan implements FilterBuku {
       .reduce(true, (b1, b2) -> b1 && b2);
   }
 
+  void tambahFilter(final FilterBuku filterBuku) {
+    filters.add(filterBuku);
+  }
+}
+
 
